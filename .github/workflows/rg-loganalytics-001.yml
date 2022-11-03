@@ -7,7 +7,7 @@ on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
     paths:
-      - 'Subscriptions/Sub-MVP-Sponsorship/rg-loganalytics-001/*.tf'
+      - 'Subscriptions/Azure-Subscription-1/rg-loganalytics-001/*.tf'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -35,17 +35,17 @@ jobs:
       - name: 'Terraform init'
         id: init
         run: |
-          cd Subscriptions/Sub-MVP-Sponsorship/rg-loganalytics-001
+          cd Subscriptions/Azure-Subscription-1/rg-loganalytics-001
           terraform init
 
       - name: 'Terraform plan'
         id: plan
         run: |
-          cd Subscriptions/Sub-MVP-Sponsorship/rg-loganalytics-001
+          cd Subscriptions/Azure-Subscription-1/rg-loganalytics-001
           terraform plan
           
       - name: 'Terraform apply'
         id: apply
         run: |
-          cd Subscriptions/Sub-MVP-Sponsorship/rg-loganalytics-001
+          cd Subscriptions/Azure-Subscription-1/rg-loganalytics-001
           terraform apply -auto-approve
