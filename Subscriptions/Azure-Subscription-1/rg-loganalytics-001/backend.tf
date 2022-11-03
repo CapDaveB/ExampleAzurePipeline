@@ -7,7 +7,7 @@ terraform {
   }
   backend "azurerm" {
     resource_group_name     = "rg-terraform-state-001"
-    storage_account_name    = "cloudinjaterraformstate"
+    storage_account_name    = "storageaccountterraninj"
     container_name          = "tfstate"
     key                     = "GitHub-Terraform-rg-loganalytics-001"
   }
