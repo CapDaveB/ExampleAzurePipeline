@@ -116,6 +116,7 @@ resource "azurerm_linux_virtual_machine" "my_terraform_vm" {
     version   = "latest"
   }
 
+  #Testing git push
   computer_name                   = "myvm"
   admin_username                  = "azureuser"
   disable_password_authentication = true
